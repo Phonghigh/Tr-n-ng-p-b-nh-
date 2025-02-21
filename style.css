@@ -1,0 +1,120 @@
+.main_container{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 100px;
+    color: aliceblue;
+    font-weight: bold;
+}
+.button input{
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+
+.button input:hover{
+    background: linear-gradient(to right, aqua, #fad0c4);
+    transition: 100ms;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(83, 81, 81);
+    
+}
+body{
+    background: linear-gradient(to right, #a7d0f4, #62e9f0);
+
+}
+
+.header_popup {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 50px;
+    background-color: whitesmoke;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative; /* Thêm để định vị dấu X */
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px; /* Căn chữ vào giữa */
+}
+
+.close-btn {
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+#btn{
+    margin-top: 30px;
+    width: 50px;
+}
+
+.body_popup{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 125px;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.custom-popup {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4a7a7;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #ff4d6d;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.blind{
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .custom-popup {
+        width: 80%;         /* Chiếm 80% chiều ngang màn hình */
+        max-width: 350px;   /* Giới hạn tối đa */
+        font-size: 16px;    /* Giảm kích thước chữ để vừa màn hình */
+    }
+    
+    .header_popup {
+        font-size: 16px;
+    }
+    
+    .body_popup {
+        font-size: 14px;
+    }
+}
+
+/* Popup cho màn hình rất nhỏ (dưới 480px) */
+@media (max-width: 480px) {
+    .custom-popup {
+        width: 90%;
+        max-width: 300px;
+    }
+    
+    .header_popup {
+        font-size: 14px;
+    }
+    
+    .body_popup {
+        font-size: 12px;
+    }
+}

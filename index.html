@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fog có điều này muốn nói</title>
+</head>
+<body>
+    <div class="main_container">
+        Trúc Trúc ơi có điều này muốn nói nèeeeeeeee
+        <div class="button">
+            <input type="button" value="Nhấn vào đây ikkkkkk" onclick="startSurprise()">
+        </div>
+    </div>
+    <audio id="backgroundMusic" src="music.mp3"></audio>
+
+    <div class="custom-popup blind" id="popup">
+        <div class="header_popup"> 
+            <div class="close-btn">X</div>
+            Tràn ngập bộ nhớ
+        </div>
+        <div class="body_popup">
+            Nhớ nhớ nhớ em
+            <input type="button" id="btn" value="OK">
+        </div>
+        
+        
+    </div>
+
+    <script>
+        const popups = document.querySelectorAll('.custom-popup');
+        con
+        function randomPosition() {
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+            return { x, y };
+        }
+
+        function showRandomPopup() {
+            const randomPopup = popups[Math.floor(Math.random() * popups.length)];
+            const { x, y } = randomPosition();
+
+            const clone = randomPopup.cloneNode(true);
+            clone.style.left = `${x}px`;
+            clone.style.top = `${y}px`;
+            clone.style.position = 'absolute';
+            clone.classList.toggle("blind", false);
+            document.body.appendChild(clone);
+
+        }
+
+        function startSurprise() {
+            document.getElementById('backgroundMusic').play();
+            setInterval(showRandomPopup, 100);
+        }
+    </script>
+</html>
