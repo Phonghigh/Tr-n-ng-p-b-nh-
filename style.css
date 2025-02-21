@@ -6,7 +6,7 @@
     font-weight: bold;
 }
 .button input{
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    background: linear-gradient(to right, #ff9a9e 50%, #fad0c4 50%);
     padding: 10px;
     font-size: 20px;
     font-weight: bold;
@@ -88,10 +88,19 @@ body{
 }
 
 @media (max-width: 768px) {
+    .main_container{
+        font-size: 12px;
+    }
+    .button input{
+        font-size: 10px;
+    }
+    .button input:hover{
+        font-size: 10px;
+        padding: 10px;
+    }
+
     .custom-popup {
-        width: 80%;         /* Chiếm 80% chiều ngang màn hình */
-        max-width: 350px;   /* Giới hạn tối đa */
-        font-size: 16px;    /* Giảm kích thước chữ để vừa màn hình */
+        scale: 0.5;
     }
     
     .header_popup {
@@ -105,9 +114,20 @@ body{
 
 /* Popup cho màn hình rất nhỏ (dưới 480px) */
 @media (max-width: 480px) {
+    .main_container{
+        font-size: 12px;
+    }
+    .button input{
+        font-size: 10px;
+    }
+    .button input:hover{
+        font-size: 10px;
+        padding: 10px;
+    }
     .custom-popup {
-        width: 90%;
-        max-width: 300px;
+        scale: 0.5;
+        /* width: 90%;
+        max-width: 300px; */
     }
     
     .header_popup {
